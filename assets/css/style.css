@@ -1,0 +1,82 @@
+/* GENERAL */
+html
+{
+    background-color: black;
+}
+
+/* TITLE CSS */
+.title-row
+{
+    height: 100px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.title-row h1
+{
+    color:white;
+}
+
+
+/* LOGIN CSS */
+.login-row
+{
+    margin-top: 150px;
+}
+
+.col-login-box
+{
+    height: 420px;
+    border: 5px solid ghostwhite;
+    border-radius: 15px;
+    color:white;
+}
+
+.login-header h3
+{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-links
+{
+    margin-top: 20px;
+}
+
+.login-links a
+{
+    text-align: center;
+}
+
+.row-or-separator p
+{
+    margin-top: 30px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    line-height: 0.1em;
+}
+
+.row-or-separator p span
+{
+    background:black;
+    padding:0 10px;
+}
+
+.row-input-login .input-group
+{
+    border: 0px solid white;
+    border-radius:5px;
+    margin-bottom: 1px;
+}
+
+.row-input-login .btn-secondary
+{
+    width: 100%;
+    margin-top:1px;
+}
+
+.row-input-login p
+{
+    margin-top: 20px;
+    text-align: center;
+}
