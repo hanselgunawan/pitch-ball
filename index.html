@@ -11,7 +11,73 @@
     <title>Pitch Ball</title>
 </head>
 <body>
-<div class="home-page">
+
+<!--<div class="login-page">-->
+    <!--<div class="row title-row">-->
+        <!--<div class="col-lg-12">-->
+            <!--<h1>Pitch Ball</h1>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row login-row">-->
+        <!--<div class="col-lg-4"></div>-->
+        <!--<div class="col-lg-4 col-login-box">-->
+            <!--<div class="row login-header">-->
+                <!--<div class="col-lg-4"></div>-->
+                <!--<div class="col-lg-4">-->
+                    <!--<h3>Sign in with</h3>-->
+                <!--</div>-->
+                <!--<div class="col-lg-4"></div>-->
+            <!--</div>-->
+            <!--<div class="row login-links">-->
+                <!--<div class="col-lg-4"></div>-->
+                <!--<div class="col-lg-4">-->
+                    <!--<a class="btn btn-block btn-social btn-google">-->
+                        <!--<span class="fa fa-google"></span>Google-->
+                    <!--</a>-->
+                    <!--<a class="btn btn-block btn-social btn-facebook">-->
+                        <!--<span class="fa fa-facebook"></span>Facebook-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="col-lg-4"></div>-->
+            <!--</div>-->
+            <!--<div class="row row-or-separator">-->
+                <!--<div class="col-lg-1"></div>-->
+                <!--<div class="col-lg-10">-->
+                    <!--<p><span>or</span></p>-->
+                <!--</div>-->
+                <!--<div class="col-lg-1"></div>-->
+            <!--</div>-->
+            <!--<div class="row row-input-login">-->
+                <!--<div class="col-lg-2"></div>-->
+                <!--<div class="col-lg-8">-->
+                    <!--<div class="row row-incorrect-credentials-login">-->
+                        <!--<div class="col-lg-2"></div>-->
+                            <!--<div class="col-lg-8">-->
+                                <!--<p class="incorrect-credentials-login"><i class="fa fa-warning fa-fw warning-red"></i>Incorrect email or password</p>-->
+                            <!--</div>-->
+                        <!--<div class="col-lg-2"></div>-->
+                    <!--</div>-->
+                    <!--<form>-->
+                        <!--<div class="input-group">-->
+                            <!--<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>-->
+                            <!--<input class="form-control" id="userEmail" type="email" placeholder="Email address" required>-->
+                        <!--</div>-->
+                        <!--<div class="input-group">-->
+                            <!--<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>-->
+                            <!--<input class="form-control" id="userPassword" type="password" placeholder="Password" required>-->
+                        <!--</div>-->
+                        <!--<input type="submit" id="loginBtn" class="btn btn-secondary" value="Sign In">-->
+                    <!--</form>-->
+                    <!--<p>Don't have an account? <span><a href="#" id="signUpLoginBtn">Sign up</a></span></p>-->
+                <!--</div>-->
+                <!--<div class="col-lg-2"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-lg-4"></div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div class="signup-page">
     <div class="row title-row">
         <div class="col-lg-12">
             <h1>Pitch Ball</h1>
@@ -19,48 +85,39 @@
     </div>
     <div class="row login-row">
         <div class="col-lg-4"></div>
-        <div class="col-lg-4 col-login-box">
-            <div class="row login-header">
+        <div class="col-lg-4 col-signup-box">
+            <div class="row signup-header">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
-                    <h3>Sign in with</h3>
+                    <h3>Sign Up</h3>
                 </div>
                 <div class="col-lg-4"></div>
             </div>
-            <div class="row login-links">
-                <div class="col-lg-4"></div>
-                <div class="col-lg-4">
-                    <a class="btn btn-block btn-social btn-google">
-                        <span class="fa fa-google"></span>Google
-                    </a>
-                    <a class="btn btn-block btn-social btn-facebook">
-                        <span class="fa fa-facebook"></span>Facebook
-                    </a>
-                </div>
-                <div class="col-lg-4"></div>
-            </div>
-            <div class="row row-or-separator">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-10">
-                    <p><span>or</span></p>
-                </div>
-                <div class="col-lg-1"></div>
-            </div>
-            <div class="row row-input-login">
+            <div class="row row-signup">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
+                <div class="row row-email-exists">
+                    <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <p class="email-exist-message"><i class="fa fa-warning fa-fw warning-red"></i>&nbsp;Email already exists</p>
+                        </div>
+                    <div class="col-lg-2"></div>
+                </div>
                     <form>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                            <input class="form-control" id="userEmail" type="email" placeholder="Email address" required>
+                            <input class="form-control" id="signUpUserEmail" type="email" placeholder="Email address" required>
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
-                            <input class="form-control" id="userPassword" type="password" placeholder="Password" required>
+                            <input class="form-control" id="signUpUserPassword" type="password" placeholder="Password" required>
                         </div>
-                        <input type="submit" id="loginBtn" class="btn btn-secondary" value="Sign In">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+                            <input class="form-control" id="signUpConfirmPassword" type="password" placeholder="Confirm password" required>
+                        </div>
+                        <input type="submit" id="signUpBtn" class="btn btn-secondary" value="Sign Up">
                     </form>
-                    <p>Don't have an account? <span><a href="#" id="signUpBtn">Sign up</a></span></p>
                 </div>
                 <div class="col-lg-2"></div>
             </div>
@@ -70,8 +127,18 @@
 </div>
 
 <script>
+    $(".row-incorrect-credentials-login").hide();
+    $(".row-email-exists").hide();
     $("#loginBtn").on("click", function (event) {
         if($("#userEmail").val() !== "" && $("#userPassword").val() !== "")
+        {
+            event.preventDefault();
+            $(".row-incorrect-credentials-login").show();
+        }
+    });
+
+    $("#signUpBtn").on("click", function (event) {
+        if($("#signUpUserEmail").val() !== "" && $("#signUpUserPassword").val() !== "" && $("#signUpConfirmPassword").val() !== "")
         {
             event.preventDefault();
         }

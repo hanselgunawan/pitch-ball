@@ -80,3 +80,73 @@ html
     margin-top: 20px;
     text-align: center;
 }
+
+.row-incorrect-credentials-login
+{
+    margin-top: -20px;
+}
+
+.incorrect-credentials-login
+{
+    background-color: pink;
+    height: 25px;
+    color:black;
+    border-radius: 5px;
+}
+
+.warning-red
+{
+    color:indianred;
+}
+
+/* SIGN UP */
+.col-signup-box
+{
+    height: 350px;
+    border: 5px solid ghostwhite;
+    border-radius: 15px;
+    color:white;
+}
+
+.signup-header h3
+{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.row-signup
+{
+    margin-top: 50px;
+}
+
+.row-signup .input-group
+{
+    border: 0px solid white;
+    border-radius:5px;
+    margin-bottom: 1px;
+}
+
+.row-signup .btn-secondary
+{
+    width: 100%;
+    margin-top:1px;
+}
+
+.row-signup p
+{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.row-email-exists
+{
+    margin-top: -40px;
+}
+
+.email-exist-message
+{
+    background-color: pink;
+    height: 25px;
+    color:black;
+    border-radius: 5px;
+}
