@@ -35,8 +35,9 @@ function draw() {
       dead = true;
     }
     
-    if (dead == false)
+    if (dead == false) {
       pipes[i].update(false)
+    }
     else
     {
       for (var j in pipes)
@@ -48,10 +49,9 @@ function draw() {
     if (pipes[i].points())
     {
       points++;
-      //pipes[i].speed = 5; ///////////
+      // pipes[i].speed = 5;
       console.log(points);
     }
-
 
       // if (points > 5 && points <= 10) {
       //   pipes[i].speed = 5;

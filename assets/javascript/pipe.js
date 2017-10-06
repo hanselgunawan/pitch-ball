@@ -51,12 +51,20 @@ function Pipe() {
   }
 
   this.points = function() {
-    if (this.x <= 95 && this.x >= 94) {
+    if (this.x == 70) { //<= 95 && this.x >= 94) {
       return true;
     } else {
       return false;
     }
   }
+
+  // this.speedUp = function() {
+  //   if (this.x <= 95 && this.x >= 94) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
 
 }
