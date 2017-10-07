@@ -4,6 +4,11 @@ html
     background-color: black;
 }
 
+.img-logo
+{
+    height: 150px;
+}
+
 /* TITLE CSS */
 .title-row
 {
@@ -149,4 +154,85 @@ html
     height: 25px;
     color:black;
     border-radius: 5px;
+}
+
+/* HOME PAGE */
+.home-page-row
+{
+    margin-top: 225px;
+}
+
+.home-page-header h3
+{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.col-home-page-box
+{
+    height: 250px;
+    border: 5px solid ghostwhite;
+    border-radius: 15px;
+    color:white;
+}
+
+.row-home-menu
+{
+    margin-top: 30px;
+}
+
+.row-home-menu button
+{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18pt;
+}
+
+.row-home-menu button:hover
+{
+    background-color: white;
+    color:black;
+    font-weight: 600;
+    box-shadow: inset 0 0 0 3px #708090;
+}
+
+/* LEADERBOARD */
+.leaderboard-row
+{
+    margin-top: 175px;
+}
+
+.leaderboard-header h3
+{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.col-leaderboard-box
+{
+    height: 450px;
+    border: 5px solid ghostwhite;
+    border-radius: 15px;
+    color:white;
+}
+
+.row-leaderboard-table
+{
+    overflow: scroll;
+    margin-top: 10px;
+}
+
+.row-leaderboard-table table th, td
+{
+    text-align: center;
+}
+
+.row-leaderboard-table table td
+{
+    vertical-align: middle;
+}
+
+.row-leaderboard-table button
+{
+    font-size: 10pt;
 }
