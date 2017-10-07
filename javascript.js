@@ -1,3 +1,11 @@
+     // Instance of FaceBook Provider Object
+     var provider = new firebase.auth.FacebookAuthProvider();
+
+     //sign in function for FaceBook
+     function facebookSignIn() {
+     	firebase.auth().signInWithRedirect(provider);
+     }
+
      // Instance of Google Provider Object
     var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -5,7 +13,7 @@
 
 
 
- function signIn() {
+ function googleSignIn() {
     firebase.auth().signInWithRedirect(provider);
 //     firebase.auth().getRedirectResult().then(function(result) {
 //   if (result.credential) {
@@ -24,7 +32,7 @@
 //   // The firebase.auth.AuthCredential type that was used.
 //   var credential = error.credential;
 //   // ...
-// });
+// });	
    }
 
 
