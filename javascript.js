@@ -4,6 +4,7 @@
      //sign in function for FaceBook
      function facebookSignIn() {
      	firebase.auth().signInWithRedirect(provider);
+     console.log("testtest")
      }
 
      // Instance of Google Provider Object
