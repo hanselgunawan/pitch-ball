@@ -1,9 +1,9 @@
      // Instance of FaceBook Provider Object
-     var provider = new firebase.auth.FacebookAuthProvider();
+     var fprovider = new firebase.auth.FacebookAuthProvider();
 
      //sign in function for FaceBook
      function facebookSignIn() {
-     	firebase.auth().signInWithRedirect(provider);
+     	firebase.auth().signInWithRedirect(fprovider);
      console.log("testtest")
      }
 
