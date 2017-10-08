@@ -6,22 +6,21 @@ function Pipe() {
   this.top = gapPosition - gap / 2;
   this.bottom = height - (gapPosition + gap / 2);
   this.x = width;
-  this.w = 20;
-  this.speed = 3;
-  this.points = 0;
+  this.w = 0.03*width;
+  this.speed = 4;
 
   this.highlight = false;
 
   this.hits = function(bird) {
-    if (bird.y < this.top || bird.y > height - this.bottom) {
-      if (bird.x > this.x && bird.x < this.x + this.w) {
+    if (bird.y+16 < this.top || bird.y+16 > height - this.bottom) {
+      if (bird.x+16 > this.x && bird.x+16 < this.x + this.w) {
         // this.speed = 0;
         // this.x -= this.speed;
-        this.highlight = true;
+        // this.highlight = true;
         return true;
       }
     }
-    this.highlight = false;
+    // this.highlight = false;
     return false;
   }
 
@@ -51,20 +50,11 @@ function Pipe() {
   }
 
   this.points = function() {
-    if (this.x == 70) { //<= 95 && this.x >= 94) {
+    if (this.x >= 0.083*width && this.x <= 0.085*width) {
       return true;
     } else {
       return false;
     }
   }
-
-  // this.speedUp = function() {
-  //   if (this.x <= 95 && this.x >= 94) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-
 
 }
