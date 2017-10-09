@@ -9,7 +9,7 @@ var replay;
 var greeting;
 var start;
 
-
+// function to setup first page (first loop) on canvas
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('sketch-holder');
@@ -34,17 +34,17 @@ function setup() {
   menu = createButton("MAIN MENU");
   menu.addClass('menuButton');
   menu.addClass('hvr-pulse-grow');
-  menu.mousePressed(mainMenu); // back to main menu ID
+  menu.mousePressed(mainMenu);
   menu.position(windowWidth*0.45, windowHeight*0.62);
   menu.size(200, 50);
   menu.hide();
 
-  noLoop();
+  noLoop(); // canvas will not loop until start button pressed
   $(".canvas-row").css("visibility", "hidden");
 
 }
 
-
+// reset function that called eachtime play again button pressed
 function resetSketch () {
   var canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('sketch-holder');
@@ -58,19 +58,19 @@ function resetSketch () {
   greeting.hide();
   menu.hide();
   replay.hide();
-  // $("#sketch-holder").css("opacity", "1");
   $("#points").css("visibility", "hidden");
   $("#result").css("visibility", "hidden");
 
 }
 
+// start game function each time start button pressed
 function startGame() {
   loop();
   $(".canvas-row").css("visibility", "visible");
   resetSketch();
-  // start.hide();
 }
 
+// Function for main menu button
 function mainMenu() {
   noLoop();
   $(".home-page").show();
@@ -86,18 +86,17 @@ function windowResized() {
 }
 
 var c = 0; // Frame Rate in Draw
-var onepoint = false;
+var onepoint = false; // point only increase 1 point
 
+// function that will keep on loop on canvas
 function draw() {
   background(0);
-
   var vol = mic.getLevel();
-
   var dead = false;
+// for loop to keep show new pipes
   for (var i = pipes.length - 1; i >= 0; i--) {
     pipes[i].show();
-    
-    
+// when the ball hit the pipes
     if (pipes[i].hits(bird)) {
       console.log("HIT");
       dead = true;
@@ -108,14 +107,12 @@ function draw() {
         greeting.show();
         menu.show();
         replay.show();
-        // $("#sketch-holder").css("opacity", "0.5");
         $("#result").css("visibility", "visible");
         $("#points").css("visibility", "hidden");
         $(".greeting").css("visibility", "visible");
         $(".replayButton").css("visibility", "visible");
         $(".menuButton").css("visibility", "visible");
       }
-
     }
     
     if (dead == false) {
@@ -136,8 +133,7 @@ function draw() {
         points++;
         onepoint = true;
         $("#points").css("visibility", "visible");
-      }
-      
+      } 
     }
 
     c++;
@@ -146,7 +142,7 @@ function draw() {
       onepoint = false;
       c = 0;
     }
-
+// speed increase when the points on range
     if (points >= 11 && points <= 20) {
       pipes[i].speed = 5;
     } 
@@ -175,10 +171,8 @@ function draw() {
   if (dead == false && frameCount % 100 == 0) {
     pipes.push(new Pipe());
   }
-
-
 }
-
+// control the ball using spacebar
 function keyPressed() {
   if (key == ' ') {
     bird.up();

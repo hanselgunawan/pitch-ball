@@ -238,6 +238,7 @@ html
 }
 
 /*GAME PAGE*/
+
 #points 
 {
     position: absolute; 
@@ -253,9 +254,9 @@ html
 
 .replayButton
 {
-    background-color: #ff4d4d;
+    background-color: gray;
     font-family: 'cooperplate' !important;
-    color: #ffcc00;
+    color: white;
     text-shadow: 2px 2px black;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
@@ -265,9 +266,10 @@ html
 
 .menuButton
 {
-    background-color: #ff4d4d;
+    /*background-color: #ff4d4d;*/
+    background-color: gray;
     font-family: 'cooperplate' !important;
-    color: #ffcc00;
+    color: white;
     text-shadow: 2px 2px black;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
@@ -278,8 +280,8 @@ html
 .greeting
 {
     font-family: 'cooperplate' !important;
-    color: #ffcc00;
-    text-shadow: 2px 2px red;
+    color: gray;
+    text-shadow: 2px 2px white;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
     font-size: 80px;
@@ -289,8 +291,10 @@ html
 {
     position: absolute;
     font-family: 'cooperplate' !important;
-    color: #ffcc00;
-    text-shadow: 2px 2px red;
+    /*color: #ffcc00;*/
+    color: gray;
+    /*text-shadow: 2px 2px red;*/
+    text-shadow: 2px 2px white;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
     margin-left: 41%;
