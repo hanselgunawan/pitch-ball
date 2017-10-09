@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head class="myHead">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -171,6 +171,13 @@
             <img class="img-logo" src="assets/images/logoWhite.png">
         </div>
     </div>
+    <div class="row row-back-to-main-menu">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h3 class="back-to-main-menu">< Back to main menu</h3>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
     <div class="row leaderboard-row">
         <div class="col-lg-4"></div>
         <div class="col-lg-4 col-leaderboard-box">
@@ -190,8 +197,47 @@
                             <th>Score</th>
                             <th>Challenge</th>
                         </tr>
+                        <tr class="leaderboard-empty-message">
+                            <th colspan="4">Leaderboard is empty</th>
+                        </tr>
                         <tr>
                             <td>1</td>
+                            <td>Hansel</td>
+                            <td>2000</td>
+                            <td><button class="btn btn-secondary">Challenge</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Hansel</td>
+                            <td>2000</td>
+                            <td><button class="btn btn-secondary">Challenge</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Hansel</td>
+                            <td>2000</td>
+                            <td><button class="btn btn-secondary">Challenge</button></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Hansel</td>
+                            <td>2000</td>
+                            <td><button class="btn btn-secondary">Challenge</button></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Hansel</td>
+                            <td>2000</td>
+                            <td><button class="btn btn-secondary">Challenge</button></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Hansel</td>
+                            <td>2000</td>
+                            <td><button class="btn btn-secondary">Challenge</button></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
                             <td>Hansel</td>
                             <td>2000</td>
                             <td><button class="btn btn-secondary">Challenge</button></td>
@@ -215,12 +261,15 @@
 </div>
 
 <script>
-    $(".login-page").show();
+    $(".login-page").hide();
     $(".signup-page").hide();
-    $(".home-page").hide();
+    $(".home-page").show();
     $(".leaderboard-page").hide();
+    $(".leaderboard-empty-message").hide();//if there's no leaderboard score in DB, SHOW this!
+
     $(".row-incorrect-credentials-login").hide();
     $(".game-page").hide();
+    $(".row-email-exists").hide();
 
     $("#loginBtn").on("click", function (event) {
         if($("#userEmail").val() !== "" && $("#userPassword").val() !== "")
@@ -242,7 +291,6 @@
         $(".game-page").show();
         startGame();
     });
-
 
 </script>
 

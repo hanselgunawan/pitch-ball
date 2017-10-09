@@ -197,9 +197,21 @@ html
 }
 
 /* LEADERBOARD */
-.leaderboard-row
+.row-back-to-main-menu
 {
-    margin-top: 175px;
+    margin-top: 150px;
+}
+
+.row-back-to-main-menu h3
+{
+    color:white;
+    font-size: 12pt;
+    margin-bottom: 15px;
+}
+
+.row-back-to-main-menu h3:hover
+{
+    text-decoration: underline;
 }
 
 .leaderboard-header h3
@@ -210,6 +222,7 @@ html
 
 .col-leaderboard-box
 {
+    overflow-y: scroll;
     height: 450px;
     border: 5px solid ghostwhite;
     border-radius: 15px;
@@ -218,7 +231,6 @@ html
 
 .row-leaderboard-table
 {
-    overflow: scroll;
     margin-top: 10px;
 }
 
@@ -238,7 +250,6 @@ html
 }
 
 /*GAME PAGE*/
-
 #points 
 {
     position: absolute; 
@@ -337,4 +348,13 @@ html
   animation-direction: alternate;
 }
 
+.col-leaderboard-box::-webkit-scrollbar {
+    width: 10px;
+}
 
+.col-leaderboard-box::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
