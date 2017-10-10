@@ -170,7 +170,7 @@ html
 
 .col-home-page-box
 {
-    height: 250px;
+    height: 300px;
     border: 5px solid ghostwhite;
     border-radius: 15px;
     color:white;
@@ -288,14 +288,20 @@ html
     font-size: 24px;
 }
 
-.greeting
+#greeting
 {
+    position: absolute;
     font-family: 'cooperplate' !important;
     color: gray;
     text-shadow: 2px 2px white;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
+    margin-left: auto;
+    margin-right: auto;
+    left: 34%;
+    top: 30%;
     font-size: 80px;
+    font-weight: bold;
 }
 
 #result 

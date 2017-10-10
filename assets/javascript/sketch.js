@@ -18,10 +18,12 @@ function setup() {
   bird = new Bird();
   pipes.push(new Pipe());
 
-  greeting = createElement('h2', 'GAME OVER');
-  greeting.addClass('greeting');
-  greeting.position(windowWidth*0.35, windowHeight*0.30);
-  greeting.hide();
+  // greeting = createElement('h2', 'GAME OVER');
+  // greeting.addClass('greeting');
+  // greeting.position(windowWidth*0.35, windowHeight*0.30);
+  // greeting.hide();
+
+  $("#greeting").html('GAME OVER');
   
   replay = createButton("PLAY AGAIN");
   replay.addClass('replayButton');
@@ -55,11 +57,11 @@ function resetSketch () {
   points = 0;
   pipes = [];
   showonce = false;
-  greeting.hide();
   menu.hide();
   replay.hide();
   $("#points").css("visibility", "hidden");
   $("#result").css("visibility", "hidden");
+  $("#greeting").css("visibility", "hidden");
 
 }
 
@@ -75,7 +77,7 @@ function mainMenu() {
   noLoop();
   $(".home-page").show();
   $(".game-page").hide();
-  $(".greeting").css("visibility", "hidden");
+  $("#greeting").css("visibility", "hidden");
   $(".replayButton").css("visibility", "hidden");
   $(".menuButton").css("visibility", "hidden");
 }
@@ -104,12 +106,11 @@ function draw() {
       if (showonce == false)
       {
         showonce = true;
-        greeting.show();
         menu.show();
         replay.show();
         $("#result").css("visibility", "visible");
         $("#points").css("visibility", "hidden");
-        $(".greeting").css("visibility", "visible");
+        $("#greeting").css("visibility", "visible");
         $(".replayButton").css("visibility", "visible");
         $(".menuButton").css("visibility", "visible");
       }
