@@ -31,7 +31,7 @@ html
 
 .col-login-box
 {
-    height: 420px;
+    height: 435px;
     border: 5px solid ghostwhite;
     border-radius: 15px;
     color:white;
@@ -156,6 +156,19 @@ html
     border-radius: 5px;
 }
 
+.row-password-not-matched
+{
+    margin-top: -15px;
+}
+
+.password-not-matched
+{
+    background-color: pink;
+    height: 25px;
+    color:black;
+    border-radius: 5px;
+}
+
 /* HOME PAGE */
 .home-page-row
 {
@@ -170,7 +183,7 @@ html
 
 .col-home-page-box
 {
-    height: 300px;
+    height: 350px;
     border: 5px solid ghostwhite;
     border-radius: 15px;
     color:white;
@@ -277,7 +290,6 @@ html
 
 .menuButton
 {
-    /*background-color: #ff4d4d;*/
     background-color: gray;
     font-family: 'cooperplate' !important;
     color: white;

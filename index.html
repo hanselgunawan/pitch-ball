@@ -113,7 +113,7 @@
                     <form>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                            <input class="form-control" id="signUpName" type="text" placeholder="Your name" required>
+                            <input class="form-control" id="signUpName" value="Hansel" type="text" placeholder="Your name" required>
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
@@ -121,11 +121,18 @@
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
-                            <input class="form-control" id="signUpUserPassword" type="password" placeholder="Password" required>
+                            <input class="form-control" id="signUpUserPassword" type="password" minlength="8" placeholder="Password" required>
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
-                            <input class="form-control" id="signUpConfirmPassword" type="password" placeholder="Confirm password" required>
+                            <input class="form-control" id="signUpConfirmPassword" type="password" minlength="8" placeholder="Confirm password" required>
+                        </div>
+                        <div class="row row-password-not-matched">
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-8">
+                                <p class="password-not-matched"><i class="fa fa-warning fa-fw warning-red"></i>&nbsp;Password not matched!</p>
+                            </div>
+                            <div class="col-lg-2"></div>
                         </div>
                         <input type="submit" id="signUpBtn" class="btn btn-secondary" value="Sign Up">
                     </form>
@@ -149,7 +156,7 @@
             <div class="row home-page-header">
                 <div class="col-lg-3"></div>
                 <div class="col-lg-6">
-                    <h3>Welcome, <span>Hansel</span>!</h3>
+                    <h3>Welcome, <span class="playerName"></span>!</h3>
                 </div>
                 <div class="col-lg-3"></div>
             </div>
@@ -273,20 +280,11 @@
     $(".row-incorrect-credentials-login").hide();
     $(".game-page").hide();
     $(".row-email-exists").hide();
+    $(".row-password-not-matched").hide();
 
-    $("#loginBtn").on("click", function (event) {
-        if($("#userEmail").val() !== "" && $("#userPassword").val() !== "")
-        {
-            event.preventDefault();
-            $(".row-incorrect-credentials-login").show();
-        }
-    });
-
-    $("#signUpBtn").on("click", function (event) {
-        if($("#signUpUserEmail").val() !== "" && $("#signUpUserPassword").val() !== "" && $("#signUpConfirmPassword").val() !== "")
-        {
-            event.preventDefault();
-        }
+    $("#signUpLoginBtn").on("click", function () {
+        $(".login-page").hide();
+        $(".signup-page").show();
     });
 
     $("#playGameBtn").on("click", function (event) {
