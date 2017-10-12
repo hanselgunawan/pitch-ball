@@ -41,9 +41,6 @@
                     <a class="btn btn-block btn-social btn-google">
                         <span class="fa fa-google"></span>Google
                     </a>
-                    <a class="btn btn-block btn-social btn-facebook">
-                        <span class="fa fa-facebook"></span>Facebook
-                    </a>
                 </div>
                 <div class="col-lg-4"></div>
             </div>
@@ -113,7 +110,7 @@
                     <form>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                            <input class="form-control" id="signUpName" value="Hansel" type="text" placeholder="Your name" required>
+                            <input class="form-control" id="signUpName" type="text" placeholder="Your name" required>
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
@@ -163,9 +160,58 @@
             <div class="row row-home-menu">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <button class="btn btn-secondary" id="playGameBtn">Play Game</button>
+                    <button class="btn btn-secondary" id="playGameBtn">Arcade Mode</button>
+                    <button class="btn btn-secondary" id="challengeBtn">Challenge a Friend</button>
                     <button class="btn btn-secondary" id="leaderboardBtn">Leaderboard</button>
                     <button class="btn btn-secondary" id="signOutBtn">Sign Out</button>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
+<div class="challenge-page">
+    <div class="row title-row">
+        <div class="col-lg-12">
+            <img class="img-logo" src="assets/images/logoWhite.png">
+        </div>
+    </div>
+    <div class="row row-back-to-main-menu">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h3 class="back-to-main-menu">< Back to main menu</h3>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="row challenge-page-row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 col-challenge-page-box">
+            <div class="row challenge-page-header">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <h3>Who do you want to challenge?</h3>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <div class="row row-challenge-email">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="row row-friend-not-found">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <p class="friend-email-message"><i class="fa fa-warning fa-fw warning-red"></i>&nbsp;Email not found</p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                    </div>
+                    <form>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
+                            <input class="form-control" id="challengeEmail" type="email" placeholder="Your friend's email" required>
+                        </div>
+                        <input type="submit" class="btn btn-secondary" id="challengeEmailBtn" value="Challenge">
+                    </form>
                 </div>
                 <div class="col-lg-2"></div>
             </div>
@@ -200,6 +246,10 @@
             <div class="row row-leaderboard-table">
                 <div class="col-lg-12">
                     <table class="table table-hover">
+                        <tr>
+                            <th colspan="2" class="table-tabs">City</th>
+                            <th colspan="2">World</th>
+                        </tr>
                         <tr>
                             <th>Rank</th>
                             <th>Name</th>
@@ -273,7 +323,9 @@
 <script>
     $(".login-page").show();
     $(".signup-page").hide();
-    $(".home-page").show();
+    $(".home-page").hide();
+    $(".challenge-page").hide();
+    $(".friend-email-message").hide();
     $(".leaderboard-page").hide();
     $(".leaderboard-empty-message").hide();//if there's no leaderboard score in DB, SHOW this!
 
@@ -291,6 +343,29 @@
         $(".home-page").hide();
         $(".game-page").show();
         startGame();
+    });
+
+    $("#challengeBtn").on("click", function (event) {
+        $(".home-page").hide();
+        $(".challenge-page").show();
+    });
+
+    $("#leaderboardBtn").on("click", function (event) {
+        $(".home-page").hide();
+        $(".leaderboard-page").show();
+    });
+
+    $("#challengeEmailBtn").on("click", function (event) {
+        if($(".friend-email-message").val() !== "")
+        {
+            $(".friend-email-message").show();
+        }
+    });
+
+    $(".back-to-main-menu").on("click", function () {
+        $(".challenge-page").hide();
+        $(".leaderboard-page").hide();
+        $(".home-page").show();
     });
 </script>
 <script language="JavaScript" type="text/javascript" src="assets/javascript/authentication.js"></script>
