@@ -319,9 +319,62 @@ html
     width: 100%;
 }
 
-.row-leaderboard-table table th
+.row-leaderboard-table table .tabs-th a
 {
-    width: 25%;
+    text-decoration: none;
+}
+
+.row-leaderboard-table table .tabs-th
+{
+    width: 33%;
+    padding: 0px;
+    height: 50px;
+}
+
+.row-leaderboard-table table th .a-city
+{
+    background-color: white;
+    color:black;
+}
+
+.row-leaderboard-table table th .a-city-inactive
+{
+    transition: 0.2s all ease-in;
+}
+
+.row-leaderboard-table table th .a-city-inactive:hover
+{
+    background-color: lightgray;
+    color:black;
+    transition: 0.2s all ease-in;
+}
+
+.row-leaderboard-table table th .a-world
+{
+    background-color: white;
+    color:black;
+}
+
+.row-leaderboard-table table th .a-world-inactive
+{
+    transition: 0.2s all ease-in;
+}
+
+.row-leaderboard-table table th .a-world-inactive:hover
+{
+    background-color: lightgray;
+    color:black;
+    transition: 0.2s all ease-in;
+}
+
+.row-leaderboard-table table th a
+{
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    padding-top: 12px;
+    color:white;
 }
 
 .table-tabs

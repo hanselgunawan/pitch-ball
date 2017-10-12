@@ -245,16 +245,16 @@
             </div>
             <div class="row row-leaderboard-table">
                 <div class="col-lg-12">
-                    <table class="table table-hover">
+                    <table class="table table-hover table-city">
                         <tr>
-                            <th colspan="2" class="table-tabs">City</th>
-                            <th colspan="2">World</th>
+                            <th colspan="2" class="table-tabs tabs-th"><a href="#" class="a-city cityBtn">City</a></th>
+                            <th colspan="2" class="tabs-th"><a href="#" class="a-world-inactive worldBtn">World</a></th>
                         </tr>
                         <tr>
                             <th>Rank</th>
                             <th>Name</th>
+                            <th>City</th>
                             <th>Score</th>
-                            <th>Challenge</th>
                         </tr>
                         <tr class="leaderboard-empty-message">
                             <th colspan="4">Leaderboard is empty</th>
@@ -262,44 +262,101 @@
                         <tr>
                             <td>1</td>
                             <td>Hansel</td>
+                            <td>Los Angeles</td>
                             <td>2000</td>
-                            <td><button class="btn btn-secondary">Challenge</button></td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>Hansel</td>
+                            <td>Los Angeles</td>
                             <td>2000</td>
-                            <td><button class="btn btn-secondary">Challenge</button></td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>Hansel</td>
+                            <td>Los Angeles</td>
                             <td>2000</td>
-                            <td><button class="btn btn-secondary">Challenge</button></td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>Hansel</td>
+                            <td>Los Angeles</td>
                             <td>2000</td>
-                            <td><button class="btn btn-secondary">Challenge</button></td>
                         </tr>
                         <tr>
                             <td>5</td>
                             <td>Hansel</td>
+                            <td>Los Angeles</td>
                             <td>2000</td>
-                            <td><button class="btn btn-secondary">Challenge</button></td>
                         </tr>
                         <tr>
                             <td>6</td>
                             <td>Hansel</td>
+                            <td>Los Angeles</td>
                             <td>2000</td>
-                            <td><button class="btn btn-secondary">Challenge</button></td>
                         </tr>
                         <tr>
                             <td>7</td>
                             <td>Hansel</td>
+                            <td>Los Angeles</td>
                             <td>2000</td>
-                            <td><button class="btn btn-secondary">Challenge</button></td>
+                        </tr>
+                    </table>
+                    <table class="table table-hover table-world">
+                        <tr>
+                            <th colspan="2" class="table-tabs tabs-th"><a href="#" class="a-city-inactive cityBtn">City</a></th>
+                            <th colspan="2" class="tabs-th"><a href="#" class="a-world worldBtn">World</a></th>
+                        </tr>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Country</th>
+                            <th>Score</th>
+                        </tr>
+                        <tr class="leaderboard-empty-message">
+                            <th colspan="4">Leaderboard is empty</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Budi</td>
+                            <td>USA</td>
+                            <td>2000</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Budi</td>
+                            <td>USA</td>
+                            <td>2000</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Budi</td>
+                            <td>USA</td>
+                            <td>2000</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Budi</td>
+                            <td>USA</td>
+                            <td>2000</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Budi</td>
+                            <td>USA</td>
+                            <td>2000</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Budi</td>
+                            <td>USA</td>
+                            <td>2000</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Budi</td>
+                            <td>USA</td>
+                            <td>2000</td>
                         </tr>
                     </table>
                 </div>
@@ -353,6 +410,18 @@
     $("#leaderboardBtn").on("click", function (event) {
         $(".home-page").hide();
         $(".leaderboard-page").show();
+        $(".table-city").show();
+        $(".table-world").hide();
+    });
+
+    $(".cityBtn").on("click", function () {
+        $(".table-city").show();
+        $(".table-world").hide();
+    });
+
+    $(".worldBtn").on("click", function () {
+        $(".table-city").hide();
+        $(".table-world").show();
     });
 
     $("#challengeEmailBtn").on("click", function (event) {
