@@ -1,18 +1,25 @@
 function Pipe() {
-  var gap = random(150, height / 2); // gap wide
+  var gap =  height*0.3; // gap wide random(150, height / 2);
   var gapPosition = random(gap, height - gap); // gap positions
 
   this.top = gapPosition - gap / 2;
   this.bottom = height - (gapPosition + gap / 2);
   this.x = width;
   this.w = 0.03*width;
-  this.speed = 4;
+  this.speed = 5;
+  this.xspeed = 3; //////////////
 
   this.highlight = false;
 
   this.hits = function(bird) {
-    if (bird.y+16 < this.top || bird.y+16 > height - this.bottom) {
-      if (bird.x+16 > this.x && bird.x+16 < this.x + this.w) {
+    if (bird.y-25 < this.top || bird.y+25 > height - this.bottom) {
+      if (bird.x+25 > this.x && bird.x+25 < this.x + this.w) {
+        this.highlight = true;
+        return true;
+      }
+    }
+    if (bird.y-25 < this.top || bird.y+25 > height - this.bottom) {
+      if (bird.x-25 > this.x && bird.x- 25 < this.x + this.w) {
         this.highlight = true;
         return true;
       }
@@ -35,7 +42,6 @@ function Pipe() {
       if (dead == false) {
         this.x -= this.speed;
       }
-
   }
 // will remove pipes that already off the screen
   this.offscreen = function() {

@@ -6,12 +6,16 @@ function Bird() {
   this.gravity = 1.3;
   this.lift = -30;
   this.velocity = 0;
+  this.r = floor(random(0, img.length));
+  //this.img = img;
 
 // this will keep on loop
   this.show = function() {
-    fill(255);
-    noStroke();
-    ellipse(this.x, this.y, 32, 32);
+    // fill(255);
+    // noStroke();
+    // ellipse(this.x, this.y, 32, 32);
+    imageMode(CENTER);
+    image(img[this.r], this.x, this.y, 50, 50);
   }
 // the velocity to make the ball up
   this.up = function() {

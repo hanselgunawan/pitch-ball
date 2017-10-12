@@ -8,6 +8,20 @@ var menu;
 var replay;
 var greeting;
 var start;
+var img = [];
+
+function preload() {
+  img[0] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Twemoji_1f61b.svg/600px-Twemoji_1f61b.svg.png");
+  img[1] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Phantom_Open_Emoji_1f602.svg/64px-Phantom_Open_Emoji_1f602.svg.png");
+  img[2] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Emojione_1F922.svg/512px-Emojione_1F922.svg.png");
+  img[3] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Emojione_1F4A9.svg/512px-Emojione_1F4A9.svg.png");
+  img[4] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Noto_Emoji_Oreo_1f921.svg/128px-Noto_Emoji_Oreo_1f921.svg.png");
+  img[5] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Emoji_u1f916.svg/128px-Emoji_u1f916.svg.png");
+  img[6] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Noto_Emoji_Oreo_1f47d.svg/128px-Noto_Emoji_Oreo_1f47d.svg.png");
+  img[7] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Emojione_1F47B.svg/240px-Emojione_1F47B.svg.png");
+  img[8] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Noto_Emoji_Oreo_1f63d.svg/128px-Noto_Emoji_Oreo_1f63d.svg.png");
+  img[9] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Noto_Emoji_Oreo_1f64a.svg/128px-Noto_Emoji_Oreo_1f64a.svg.png");
+}
 
 // function to setup first page (first loop) on canvas
 function setup() {
@@ -17,11 +31,6 @@ function setup() {
   mic.start();
   bird = new Bird();
   pipes.push(new Pipe());
-
-  // greeting = createElement('h2', 'GAME OVER');
-  // greeting.addClass('greeting');
-  // greeting.position(windowWidth*0.35, windowHeight*0.30);
-  // greeting.hide();
 
   $("#greeting").html('GAME OVER');
   
@@ -124,6 +133,7 @@ function draw() {
       for (var j in pipes)
        {
         pipes[j].speed = 0;
+        pipes[j].xspeed = 0;
        }
     }
     
@@ -143,17 +153,25 @@ function draw() {
       onepoint = false;
       c = 0;
     }
-// speed increase when the points on range
-    if (points >= 11 && points <= 20) {
-      pipes[i].speed = 5;
-    } 
+// speed increase when the points on range ///////////////
 
-    if (points >= 21 && points <= 30) {
+    if (points >= 6 && points <= 10) {
       pipes[i].speed = 6;
     } 
 
-    if (points >= 31 ) {
+    if (points >= 11 && points <= 15) {
       pipes[i].speed = 7;
+    } 
+
+    if (points >= 16 ) { /////////////////////////////////
+      pipes[i].speed = 7;
+        if (points % 2) {
+        pipes[i].top += pipes[i].xspeed;
+        pipes[i].bottom -= pipes[i].xspeed;
+        } else {
+        pipes[i].top -= pipes[i].xspeed;
+        pipes[i].bottom += pipes[i].xspeed;
+        } 
     }
 
 
