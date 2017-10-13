@@ -11,16 +11,16 @@ var start;
 var img = [];
 
 function preload() {
-  img[0] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Twemoji_1f61b.svg/600px-Twemoji_1f61b.svg.png");
-  img[1] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Phantom_Open_Emoji_1f602.svg/64px-Phantom_Open_Emoji_1f602.svg.png");
-  img[2] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Emojione_1F922.svg/512px-Emojione_1F922.svg.png");
-  img[3] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Emojione_1F4A9.svg/512px-Emojione_1F4A9.svg.png");
+  img[0] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Noto_Emoji_Oreo_1f600.svg/128px-Noto_Emoji_Oreo_1f600.svg.png");
+  img[1] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Phantom_Open_Emoji_1f602.svg/240px-Phantom_Open_Emoji_1f602.svg.png");
+  img[2] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Noto_Emoji_Oreo_1f62b.svg/128px-Noto_Emoji_Oreo_1f62b.svg.png");
+  img[3] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Noto_Emoji_Oreo_1f922.svg/128px-Noto_Emoji_Oreo_1f922.svg.png");
   img[4] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Noto_Emoji_Oreo_1f921.svg/128px-Noto_Emoji_Oreo_1f921.svg.png");
-  img[5] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Emoji_u1f916.svg/128px-Emoji_u1f916.svg.png");
-  img[6] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Noto_Emoji_Oreo_1f47d.svg/128px-Noto_Emoji_Oreo_1f47d.svg.png");
-  img[7] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Emojione_1F47B.svg/240px-Emojione_1F47B.svg.png");
+  img[5] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Emojione_1F4A9.svg/240px-Emojione_1F4A9.svg.png");
+  img[6] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Emoji_u1f916.svg/128px-Emoji_u1f916.svg.png");
+  img[7] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Noto_Emoji_Oreo_1f64a.svg/128px-Noto_Emoji_Oreo_1f64a.svg.png");
   img[8] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Noto_Emoji_Oreo_1f63d.svg/128px-Noto_Emoji_Oreo_1f63d.svg.png");
-  img[9] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Noto_Emoji_Oreo_1f64a.svg/128px-Noto_Emoji_Oreo_1f64a.svg.png");
+  img[9] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Fxemoji_u1F607.svg/240px-Fxemoji_u1F607.svg.png");
 }
 
 // function to setup first page (first loop) on canvas
@@ -38,7 +38,6 @@ function setup() {
   replay.addClass('replayButton');
   replay.addClass('hvr-pulse-grow');
   replay.mousePressed(resetSketch);
-  replay.position(windowWidth*0.45, windowHeight*0.55);
   replay.size(200, 50);
   replay.hide();
 
@@ -46,7 +45,6 @@ function setup() {
   menu.addClass('menuButton');
   menu.addClass('hvr-pulse-grow');
   menu.mousePressed(mainMenu);
-  menu.position(windowWidth*0.45, windowHeight*0.62);
   menu.size(200, 50);
   menu.hide();
 
