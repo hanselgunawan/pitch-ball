@@ -162,7 +162,8 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <button class="btn btn-secondary" id="playGameBtn">Arcade Mode</button>
-                    <button class="btn btn-secondary" id="challengeBtn">Challenge a Friend</button>
+                    <button class="btn btn-secondary" id="challengeBtn">New Challenge</button>
+                    <button class="btn btn-secondary" id="existingChallengesBtn">My Challenges</button>
                     <button class="btn btn-secondary" id="leaderboardBtn">Leaderboard</button>
                     <button class="btn btn-secondary" id="signOutBtn">Sign Out</button>
                 </div>
@@ -215,6 +216,155 @@
                     </form>
                 </div>
                 <div class="col-lg-2"></div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
+<div class="existing-challenge-page">
+    <div class="row title-row">
+        <div class="col-lg-12">
+            <img class="img-logo" src="assets/images/logoWhite.png">
+        </div>
+    </div>
+    <div class="row row-back-to-main-menu">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h3 class="back-to-main-menu">< Back to main menu</h3>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="row existing-row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 col-existing-box">
+            <div class="row existing-header">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <h3>My Challenges</h3>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <div class="row row-existing-table">
+                <div class="col-lg-12">
+                    <table class="table table-hover table-existing">
+                        <tr>
+                            <th>Challenger</th>
+                            <th>Score<br> <span class="score-desc">(You - Challenger)</span></th>
+                            <th>Status</th>
+                            <th colspan="2">Action</th>
+                        </tr>
+                        <tr class="existing-empty-message">
+                            <th colspan="4">No Challenges</th>
+                        </tr>
+                        <tr class="challenge-entry" cid="Hhauwhduawyduhi">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Pending</td>
+                            <td><button class="btn btn-success acceptBtn">Accept</button></td>
+                            <td><button class="btn btn-danger rejectBtn">Reject</button></td>
+                        </tr>
+                        <tr class="challenge-entry">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Your Turn</td>
+                            <td colspan="2"><button class="btn btn-secondary playBtn">Play</button></td>
+                        </tr>
+                        <tr class="challenge-entry">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Foe's Turn</td>
+                            <td colspan="2"><button class="btn btn-secondary playBtn disabled">Play</button></td>
+                        </tr>
+                        <tr class="challenge-entry">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Foe's Turn</td>
+                            <td colspan="2"><button class="btn btn-secondary playBtn disabled">Play</button></td>
+                        </tr>
+                        <tr class="challenge-entry">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Pending</td>
+                            <td><button class="btn btn-success acceptBtn">Accept</button></td>
+                            <td><button class="btn btn-danger rejectBtn">Reject</button></td>
+                        </tr>
+                        <tr class="challenge-entry">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Your Turn</td>
+                            <td colspan="2"><button class="btn btn-secondary playBtn">Play</button></td>
+                        </tr>
+                        <tr class="challenge-entry">
+                            <td>William</td>
+                            <td><span class="win-score">5</span> - <span class="lose-score">0</span></td>
+                            <td>Pending</td>
+                            <td><button class="btn btn-success acceptBtn">Accept</button></td>
+                            <td><button class="btn btn-danger rejectBtn">Reject</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
+<div class="challenge-details-page">
+    <div class="row title-row">
+        <div class="col-lg-12">
+            <img class="img-logo" src="assets/images/logoWhite.png">
+        </div>
+    </div>
+    <div class="row row-back-to-main-menu">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h3 class="back-to-my-challenge">< Back to My Challenges</h3>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="row existing-row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 col-challenge-details">
+            <div class="row existing-header">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <h3>My Challenge Details</h3>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <div class="row row-existing-table">
+                <div class="col-lg-12">
+                    <table class="table table-hover table-existing">
+                        <tr>
+                            <th>Round</th>
+                            <th>Score<br> <span class="score-desc">(You - William)</span></th>
+                        </tr>
+                        <tr class="existing-empty-message">
+                            <th colspan="4">No Challenges</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><span class="win-score">44</span> - <span class="lose-score">32</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><span class="win-score">33</span> - <span class="lose-score">4</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><span class="win-score">77</span> - <span class="lose-score">100</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><span class="win-score">44</span> - <span class="lose-score">65</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><span class="win-score">88</span> - <span class="lose-score">123</span></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="col-lg-4"></div>
@@ -386,6 +536,9 @@
     $(".friend-email-message").hide();
     $(".leaderboard-page").hide();
     $(".leaderboard-empty-message").hide();//if there's no leaderboard score in DB, SHOW this!
+    $(".existing-empty-message").hide();//if no challenges, SHOW this!
+    $(".existing-challenge-page").hide();
+    $(".challenge-details-page").hide();
 
     $(".row-incorrect-credentials-login").hide();
     $(".game-page").hide();
@@ -425,6 +578,27 @@
         $(".table-world").show();
     });
 
+    $(".challenge-entry").on("click", function () {
+        $(".challenge-details-page").show();
+        $(".existing-challenge-page").hide();
+    });
+
+    $(".acceptBtn").on("click", function (e) {
+        e.stopPropagation();//to handle .challenge-entry click
+        alert("Accepted!");
+    });
+
+    $(".rejectBtn").on("click", function (e) {
+        e.stopPropagation();//to handle .challenge-entry click
+        alert("Rejected!");
+    });
+
+    $(".playBtn").on("click", function (e) {
+        e.stopPropagation();//to handle .challenge-entry click
+        alert("Play!");
+    });
+
+
     $("#challengeEmailBtn").on("click", function (event) {
         if($(".friend-email-message").val() !== "")
         {
@@ -432,10 +606,21 @@
         }
     });
 
+    $("#existingChallengesBtn").on("click", function () {
+        $(".home-page").hide();
+        $(".existing-challenge-page").show();
+    });
+
     $(".back-to-main-menu").on("click", function () {
         $(".challenge-page").hide();
         $(".leaderboard-page").hide();
+        $(".existing-challenge-page").hide();
         $(".home-page").show();
+    });
+
+    $(".back-to-my-challenge").on("click", function () {
+        $(".challenge-details-page").hide();
+        $(".existing-challenge-page").show();
     });
 </script>
 <script language="JavaScript" type="text/javascript" src="assets/javascript/authentication.js"></script>
