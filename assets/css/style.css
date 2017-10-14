@@ -587,7 +587,7 @@ html
     font-weight: bold;
     font-size: 24px;
     left: 45%;
-    top: 55%;
+    top: 57%;
 }
 
 .menuButton
@@ -602,7 +602,7 @@ html
     font-weight: bold;
     font-size: 24px;
     left: 45%;
-    top: 62%;
+    top: 64%;
 }
 
 #greeting
@@ -613,7 +613,7 @@ html
     text-shadow: 2px 2px gray;
 /*    -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);*/
-    left: 35%;
+    left: 37%;
     top: 30%;
     font-size: 80px;
 }
@@ -626,7 +626,7 @@ html
     text-shadow: 2px 2px grey;
 /*    -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);*/
-    left: 41%;
+    left: 35%;
     top: 43%;
     font-size: 40px;
     visibility: hidden;

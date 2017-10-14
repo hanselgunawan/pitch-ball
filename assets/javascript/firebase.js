@@ -474,11 +474,10 @@ $(".btn-google").on("click", function () {
         var txtEmail2 = txtEmail.replace(/\./g, ',');
 
         users.child(txtEmail2).once("value").then(res =>{
-        	if (res.val() == "")
+        	if (res.val() == null)
         		methods.newUser(result.user.displayName, txtEmail2);
         	else
         		player = res.val();
-
         })
 
         $(".playerName").html(result.user.displayName);//<-- Change username
