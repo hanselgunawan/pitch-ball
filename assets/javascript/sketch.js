@@ -10,6 +10,8 @@ var greeting;
 var start;
 var img = [];
 
+
+
 function preload() {
   img[0] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Noto_Emoji_Oreo_1f600.svg/128px-Noto_Emoji_Oreo_1f600.svg.png");
   img[1] = loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Phantom_Open_Emoji_1f602.svg/240px-Phantom_Open_Emoji_1f602.svg.png");
@@ -29,6 +31,8 @@ function setup() {
   canvas.parent('sketch-holder');
   mic = new p5.AudioIn();
   mic.start();
+  fft = new p5.FFT(0.3, 2048);
+  fft.setInput(mic);
   bird = new Bird();
   pipes.push(new Pipe());
 
@@ -120,7 +124,27 @@ function draw() {
         $("#greeting").css("visibility", "visible");
         $(".replayButton").css("visibility", "visible");
         $(".menuButton").css("visibility", "visible");
+
+
+
+        //GET MODE
+        // var mode_ = "";
+        // if (currentMode == "arcade")
+        //   mode_ = "arcade";
+        // else
+        //   mode_ = "challenge"
+
+        //IF MODE IS CHALLENGE, GET CHALLENGE ID
+        // var c__id;
+        // if (mode_ == "challenge")
+        //   c__id = currentMode;
+        
+        //CALL FUNCTION COMPLETE_ONE_GAME
+        methods.completeOneGame("arcade", points);
       }
+
+
+
     }
     
     if (dead == false) {
@@ -178,7 +202,10 @@ function draw() {
     }
 
     $("#points").html(points);
-    $("#result").html('YOUR SCORE: ' + points);
+    var m = $("<div>");
+    m.addClass("text-center");
+    m.html('YOUR SCORE: ' + points + "<br> YOUR HIGH SCORE: " + player.highscore);
+    $("#result").html(m);
   }
 
   if (dead == false)

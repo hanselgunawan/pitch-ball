@@ -88,7 +88,14 @@
             <img class="img-logo" src="assets/images/logoWhite.png">
         </div>
     </div>
-    <div class="row login-row">
+    <div class="row row-back-to-login-page">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h3 class="back-to-login-page">< Back to login page</h3>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <div class="row signup-row">
         <div class="col-lg-4"></div>
         <div class="col-lg-4 col-signup-box">
             <div class="row signup-header">
@@ -161,9 +168,7 @@
             <div class="row row-home-menu">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <button class="btn btn-secondary" id="playGameBtn">Arcade Mode</button>
-                    <button class="btn btn-secondary" id="challengeBtn">New Challenge</button>
-                    <button class="btn btn-secondary" id="existingChallengesBtn">My Challenges</button>
+                    <button class="btn btn-secondary" id="playGameBtn">Play Game</button>
                     <button class="btn btn-secondary" id="leaderboardBtn">Leaderboard</button>
                     <button class="btn btn-secondary" id="signOutBtn">Sign Out</button>
                 </div>
@@ -247,7 +252,7 @@
             </div>
             <div class="row row-existing-table">
                 <div class="col-lg-12">
-                    <table class="table table-hover table-existing">
+                    <table id="challengeTable" class="table table-hover table-existing">
                         <tr>
                             <th>Challenger</th>
                             <th>Score<br> <span class="score-desc">(You - Challenger)</span></th>
@@ -348,7 +353,7 @@
             </div>
             <div class="row row-existing-table">
                 <div class="col-lg-12">
-                    <table class="table table-hover table-existing">
+                    <table id="challengeDetailsTable" class="table table-hover table-existing">
                         <tr>
                             <th>Round</th>
                             <th>Score<br> <span class="score-desc">(You - William)</span></th>
@@ -409,119 +414,9 @@
             </div>
             <div class="row row-leaderboard-table">
                 <div class="col-lg-12">
-                    <table class="table table-hover table-city">
-                        <tr>
-                            <th colspan="2" class="table-tabs tabs-th"><a href="#" class="a-city cityBtn">City</a></th>
-                            <th colspan="2" class="tabs-th"><a href="#" class="a-world-inactive worldBtn">World</a></th>
-                        </tr>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Name</th>
-                            <th>City</th>
-                            <th>Score</th>
-                        </tr>
-                        <tr class="leaderboard-empty-message">
-                            <th colspan="4">Leaderboard is empty</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Hansel</td>
-                            <td>Los Angeles</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Hansel</td>
-                            <td>Los Angeles</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Hansel</td>
-                            <td>Los Angeles</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Hansel</td>
-                            <td>Los Angeles</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Hansel</td>
-                            <td>Los Angeles</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Hansel</td>
-                            <td>Los Angeles</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Hansel</td>
-                            <td>Los Angeles</td>
-                            <td>2000</td>
-                        </tr>
+                    <table id="cityLeaderboardTable" class="table table-hover table-city">
                     </table>
-                    <table class="table table-hover table-world">
-                        <tr>
-                            <th colspan="2" class="table-tabs tabs-th"><a href="#" class="a-city-inactive cityBtn">City</a></th>
-                            <th colspan="2" class="tabs-th"><a href="#" class="a-world worldBtn">World</a></th>
-                        </tr>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Name</th>
-                            <th>Country</th>
-                            <th>Score</th>
-                        </tr>
-                        <tr class="leaderboard-empty-message">
-                            <th colspan="4">Leaderboard is empty</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Budi</td>
-                            <td>USA</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Budi</td>
-                            <td>USA</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Budi</td>
-                            <td>USA</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Budi</td>
-                            <td>USA</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Budi</td>
-                            <td>USA</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Budi</td>
-                            <td>USA</td>
-                            <td>2000</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Budi</td>
-                            <td>USA</td>
-                            <td>2000</td>
-                        </tr>
+                    <table id="worldLeaderboardTable" class="table table-hover table-world">
                     </table>
                 </div>
             </div>
@@ -541,6 +436,7 @@
     </div>
 </div>
 
+<<<<<<< Updated upstream
 <script>
     $(".login-page").show();
     $(".signup-page").hide();
@@ -638,5 +534,10 @@
     });
 </script>
 <script language="JavaScript" type="text/javascript" src="assets/javascript/authentication.js"></script>
+=======
+<script src="assets/javascript/main.js"></script>
+<script language="JavaScript" type="text/javascript" src="assets/javascript/firebase.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+>>>>>>> Stashed changes
 </body>
 </html>

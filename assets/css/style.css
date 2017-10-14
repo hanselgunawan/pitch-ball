@@ -119,9 +119,32 @@ html
     margin-top: 15px;
 }
 
+.signup-row
+{
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
 .row-signup
 {
-    margin-top: 30px;
+    margin-top: 20px;
+}
+
+.row-back-to-login-page
+{
+    margin-top: 150px;
+}
+
+.row-back-to-login-page h3:hover
+{
+    text-decoration: underline;
+}
+
+.row-back-to-login-page h3
+{
+    color:white;
+    font-size: 12pt;
+    margin-bottom: 0px;
 }
 
 .row-signup .input-group
@@ -183,7 +206,7 @@ html
 
 .col-home-page-box
 {
-    height: 450px;
+    height: 350px;
     border: 5px solid ghostwhite;
     border-radius: 15px;
     color:white;
@@ -436,7 +459,7 @@ html
     font-size: 11pt;
 }
 
-.table-existing tr th:nth-child(1), th:nth-child(3), th:nth-child(4)
+.table-existing tr th:nth-child(1), .table-existing tr th:nth-child(3), .table-existing tr th:nth-child(4)
 {
     padding-top: 25px;
 }
