@@ -601,7 +601,7 @@ html
     filter: drop-shadow(5px 5px 5px #222);
     font-weight: bold;
     font-size: 24px;
-    left: 45%;
+    left:45%;
     top: 64%;
 }
 
@@ -613,7 +613,8 @@ html
     text-shadow: 2px 2px gray;
 /*    -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);*/
-    left: 37%;
+    width: 100%;
+    text-align: center;
     top: 30%;
     font-size: 80px;
 }
@@ -626,10 +627,18 @@ html
     text-shadow: 2px 2px grey;
 /*    -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);*/
-    left: 35%;
+    left: 0;
+    right: 0;
     top: 43%;
     font-size: 40px;
     visibility: hidden;
+}
+
+.canvas-row
+{
+    border:1px solid white !important;
+    width: 100% !important;
+    text-align: center !important;
 }
 
 /* HOVER */
